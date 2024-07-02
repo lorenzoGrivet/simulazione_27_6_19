@@ -8,8 +8,11 @@ class Controller:
         # the model, which implements the logic of the program and holds the datag
         self.model = model
 
+    def handleCreaGrafo(self,e):
+        pass
+
     def handleAnalisi(self,e):
-        i=0
+
         pass
 
     def handlePercorso(self,e):

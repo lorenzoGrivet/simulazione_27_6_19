@@ -17,18 +17,18 @@ class View(ft.UserControl):
 
 
     def load_interface(self):
-        self.ddCategoria=ft.Dropdown(label="Categoria reato")
-        self.btnAnalisi=ft.ElevatedButton(text="Analisi Distretti",on_click=self._controller.handleAnalisi)
-        row1=ft.Row([ft.Container(self.ddCategoria,width=300),ft.Container(self.btnAnalisi,width=200)],alignment=ft.MainAxisAlignment.CENTER)
+        self.ddRuolo=ft.Dropdown(label="Ruolo")
+        self.btnGrafo=ft.ElevatedButton(text="Crea grafo",on_click=self._controller.handleCreaGrafo)
+        row1=ft.Row([ft.Container(self.ddRuolo,width=300),ft.Container(self.btnGrafo,width=200)],alignment=ft.MainAxisAlignment.CENTER)
         self._page.add(row1)
 
-        self.ddAnno=ft.Dropdown(label="Anno")
-        row2 = ft.Row([ft.Container(self.ddAnno, width=300)],alignment=ft.MainAxisAlignment.CENTER)
+        self.btnAnalisi=ft.ElevatedButton(text="Analisi Connessi",on_click=self._controller.handleAnalisi)
+        row2 = ft.Row([ft.Container(self.btnAnalisi, width=300)],alignment=ft.MainAxisAlignment.CENTER)
         self._page.add(row2)
 
-        self.ddArco=ft.Dropdown(label="Arco")
+        self.txtArtista= ft.TextField(label="Artista")
         self.btnPercorso=ft.ElevatedButton(text="Calcola Percorso",on_click=self._controller.handlePercorso)
-        row3=ft.Row([ft.Container(self.ddArco,width=300),ft.Container(self.btnPercorso,width=200)],alignment=ft.MainAxisAlignment.CENTER)
+        row3=ft.Row([ft.Container(self.txtArtista,width=300),ft.Container(self.btnPercorso,width=200)],alignment=ft.MainAxisAlignment.CENTER)
         self._page.add(row3)
 
         self.txtResult=ft.ListView(expand=1,auto_scroll=True)
