@@ -22,6 +22,8 @@ class View(ft.UserControl):
         row1=ft.Row([ft.Container(self.ddRuolo,width=300),ft.Container(self.btnGrafo,width=200)],alignment=ft.MainAxisAlignment.CENTER)
         self._page.add(row1)
 
+        self._controller.fillDDRuolo()
+
         self.btnAnalisi=ft.ElevatedButton(text="Analisi Connessi",on_click=self._controller.handleAnalisi)
         row2 = ft.Row([ft.Container(self.btnAnalisi, width=300)],alignment=ft.MainAxisAlignment.CENTER)
         self._page.add(row2)
